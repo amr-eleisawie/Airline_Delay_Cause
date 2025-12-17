@@ -9,13 +9,13 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_absolute_error, mean_squared_error, median_absolute_error 
 
-# تحميل البيانات
+
 data = pd.read_csv("C:\\Users\\user\\Downloads\\Airline_Delay_Cause.csv")
 print(data.info())
 # حذف الصفوف اللي فيها missing values
 data.dropna(inplace=True)
 
-# إعادة ضبط الفهارس بعد الحذف (ضروري جداً)
+# إعادة ضبط الفهارس بعد الحذف 
 data.reset_index(drop=True, inplace=True)
 
 # حذف الأعمدة غير المطلوبة
@@ -83,3 +83,4 @@ for Model in Models:
     print(f'MSE value is: {mse}')
     print(f'MdSE value is: {mdse}')
     print('=================================================')
+print ("End")
